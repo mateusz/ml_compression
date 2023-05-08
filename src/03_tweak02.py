@@ -265,6 +265,10 @@ except KeyboardInterrupt:
 #[365] l=0.04349067, bpp=0.2017, perc=0.03340337, aux=15.5376 (min=0.04356642)
 # but good after ~200 epochs - aux went down, then up to 4200, then down again
 
+# Note the models before 03f were using parquet compression on an unoptimised aux loss.
+# The result seems good specially for 03c, but would need to investigated further
+# because it can contain bugs :)
+
 #%%
 
 min_loss = 9999999
