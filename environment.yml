@@ -1,0 +1,28 @@
+name: rewrite
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.10
+  - pip
+  - cudatoolkit=11.2
+  - cudnn=8.1.0
+  - pip:
+      - conda-lock
+      - ipykernel
+      - ipywidgets
+      - pandas
+      - numpy
+      - matplotlib
+      - scikit-learn
+      - argparse
+      - pyarrow
+      - visidata
+      - torch
+      - torchvision
+      - torchaudio
+      - torchdata
+      - torcharrow
+      - compressai
+      - scikit-image
