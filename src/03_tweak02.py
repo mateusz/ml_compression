@@ -146,6 +146,9 @@ def clip_gradient(optimizer, grad_clip):
             if param.grad is not None:
                 param.grad.data.clamp_(-grad_clip, grad_clip)
 
+# Note the models before 03f were using parquet compression on an unoptimised aux loss.
+# The result seems good specially for 03c, but would need to investigated further
+# because it can contain bugs :)
 #%%
 
 opt = torch.optim.Adam((net.encode+net.decode).parameters(), lr=0.001)
@@ -260,14 +263,6 @@ try:
         running_auxloss = 0.0
 except KeyboardInterrupt:
     print('interrupted!')
-
-# N=32, lr=0.001, tile=128, batch=16, ssim, bpp at 0.05
-#[365] l=0.04349067, bpp=0.2017, perc=0.03340337, aux=15.5376 (min=0.04356642)
-# but good after ~200 epochs - aux went down, then up to 4200, then down again
-
-# Note the models before 03f were using parquet compression on an unoptimised aux loss.
-# The result seems good specially for 03c, but would need to investigated further
-# because it can contain bugs :)
 
 #%%
 

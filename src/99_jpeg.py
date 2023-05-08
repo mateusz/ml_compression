@@ -75,7 +75,7 @@ orig = ImData('out/test-orig.png', Format.PIL)
 #zero3c = ImData('test-03c', Format.PARQUET)
 #zero3d = ImData('test-03d', Format.PARQUET)
 #zero3e = ImData('test-03e', Format.PARQUET)
-#zero3f = ImData('test-03f', Format.PARQUET)
+zero3f = ImData('test-03f', Format.PARQUET)
 #zero4a = ImData('test-04a', Format.PARQUET)
 zero4b = ImData('test-04b', Format.PARQUET)
 
@@ -88,15 +88,16 @@ zero4b = ImData('test-04b', Format.PARQUET)
 #print("03c: psnr=%.2f, ms-ssim=%.6f, rate=%.4f, bpp=%.2f" % get_metrics(orig, zero3c))
 #print("03d: psnr=%.2f, ms-ssim=%.6f, rate=%.4f, bpp=%.2f" % get_metrics(orig, zero3d))
 #print("03e: psnr=%.2f, ms-ssim=%.6f, rate=%.4f, bpp=%.2f" % get_metrics(orig, zero3e))
-#print("03f: psnr=%.2f, ms-ssim=%.6f, rate=%.4f, bpp=%.2f" % get_metrics(orig, zero3f))
+print("03f: psnr=%.2f, ms-ssim=%.6f, rate=%.4f, bpp=%.2f" % get_metrics(orig, zero3f))
 #print("04a: psnr=%.2f, ms-ssim=%.6f, rate=%.4f, bpp=%.2f" % get_metrics(orig, zero4a))
-print("04b: psnr=%.2f, ms-ssim=%.6f, rate=%.4f, bpp=%.2f" % get_metrics(orig, zero4b))
+#print("04b: psnr=%.2f, ms-ssim=%.6f, rate=%.4f, bpp=%.2f" % get_metrics(orig, zero4b))
 
 #orig: psnr=inf, ms-ssim=1.000000, rate=1.0000, bpp=9.53
 #jpeg95: psnr=40.87, ms-ssim=0.990100, rate=0.1568, bpp=1.49
 #03c: psnr=37.69, ms-ssim=0.979726, rate=0.0187, bpp=0.18
 #jpeg70: psnr=37.24, ms-ssim=0.973139, rate=0.0416, bpp=0.40
 #04a: psnr=36.58, ms-ssim=0.986462, rate=0.0316, bpp=0.30
+#03f: psnr=36.47, ms-ssim=0.970446, rate=0.0148, bpp=0.14
 #03e: psnr=36.41, ms-ssim=0.971706, rate=0.0146, bpp=0.14
 #03d: psnr=33.96, ms-ssim=0.961352, rate=0.0133, bpp=0.13
 #jpeg50: psnr=36.36, ms-ssim=0.963297, rate=0.0299, bpp=0.29

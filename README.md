@@ -2,7 +2,9 @@
 
 My sandbox for playing with AI-based lossy compression algorithms.
 
-Note: code here is mostly in a "note to self" format, and is just me playing with Torch, CompressAI and image processing, then writing things down for my future self.
+Code here is mostly in a "note to self" format, and is just me playing with Torch, CompressAI and image processing, then writing things down for my future self. Lower-numbered code contains bugs.
+
+The exploration here has concluded. The next step would be an organised search for a viable model based on the 04 draft.
 
 ## Motiviation
 
@@ -69,7 +71,7 @@ You can see the tradeoff is hard to compare: PSNR is close, but 04b has a vastly
 
 ![](artifacts/fragment-orig.png)
 
-### JPEG quality 50
+### JPEG quality 20
 
 ![](artifacts/fragment-jpeg20.png)
 
@@ -77,7 +79,7 @@ You can see the tradeoff is hard to compare: PSNR is close, but 04b has a vastly
 
 ![](artifacts/fragment-04b.png)
 
-## Interim conclusions
+## Conclusions
 
 The tradeoff presented here makes no sense: the model size is way too big, the savings are way too small, and qualitative comparison doesn't stack up against JPEG (which is optimised for human perception).
 
